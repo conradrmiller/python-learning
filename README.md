@@ -1,20 +1,25 @@
 # python-learning
 Basic python experiments for learning 
 
-import random
-correct = 0
-for iteration in range(0,10):
-    k = random.randint(10000, 10000000)
-print("Prime or Not: Is the number ",k," prime? (yes or no)")
-answer = input()
-isprime = "yes"
-isprime = True
-for n in range(1, int(k/2)):
-    if k%n == 0:
-        isprime = "no"
-if isprime==answer:
-    print("You are correct!")
-    correct = correct + 1
+choice = "scissors"
+print("rock-paper-scissors: type in your choice:   ")
+player = input()
+if player == choice:
+    print("Game is a tie. Please try again.")
 else:
-    print ("You are incorrect.")
-print ("You gave ",correct," right answers out of 10.")
+    if player == "rock":
+        if choice == "scissors":
+            print("Congratulations. You win.")
+        else:
+            print("Sorry - computer wins.")
+    if player == "paper":
+        if choice == "scissors":
+            print("Sorry - computer wins.")
+        else:
+            print("Congratulations. You win.")
+    if player == "scissors":
+        if choice == "rock":
+            print("Sorry - computer wins.")
+        else:
+            print("Congratulations. You win.")
+
